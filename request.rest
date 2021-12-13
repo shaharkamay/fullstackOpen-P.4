@@ -1,0 +1,12 @@
+POST http://localhost:3003/api/blogs HTTP/1.1
+Content-Type: application/json
+
+{
+    "title":"yuli's blog",
+    "author":"yuli klein",
+    "url" : "https://yuli.blog/",
+    "likes": 12
+}
+
+###
+GET http://localhost:3003/api/blogs HTTP/1.1

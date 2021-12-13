@@ -1,0 +1,35 @@
+{
+  "name": "fullstackOpen-P.4",
+  "version": "1.0.0",
+  "description": "a repo to the exercises in open fullstack part 4",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SimpleLogic420/fullstackOpen-P.4.git"
+  },
+  "keywords": [],
+  "author": "nadav_vol <simplelogic420@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SimpleLogic420/fullstackOpen-P.4/issues"
+  },
+  "homepage": "https://github.com/SimpleLogic420/fullstackOpen-P.4#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.1.1",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "jest": "^27.4.4"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
