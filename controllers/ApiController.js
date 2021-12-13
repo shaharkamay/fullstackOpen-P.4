@@ -4,7 +4,7 @@ async function postBlog(request, response) {
   const newBlog = request.body;
   console.log(newBlog);
   await Blog.insertMany(newBlog);
-  response.send("new blog as been inserted sucssefully to the database");
+  response.send("new blog as been inserted successfully to the database");
 }
 
 async function getAllBlogs(request, response) {
