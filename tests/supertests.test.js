@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const Blog = require("../models/blogSchema");
 const supertest = require("supertest");
 const app = require("../app");
 require('dotenv').config();
@@ -10,14 +11,14 @@ let id = '';
 let token = "bearer " + process.env.TEST_TOKEN;
 
 test("blogs are returned as json", async () => {
-  console.log(token);
+  const dbBlogs = await Blog.find();
   const result = await api
     .get("/api/blogs")
     .set('Authorization', token)
     .expect(200)
     .expect("Content-Type", /application\/json/)
 
-  expect(result.body.length).toBe(11);
+  expect(result.body.length).toBe(dbBlogs.length);
 });
 
 test("verify that the unique identifier property of the blog posts is named id", async () => {
