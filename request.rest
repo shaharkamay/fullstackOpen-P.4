@@ -1,12 +1,44 @@
 POST http://localhost:3003/api/blogs HTTP/1.1
 Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Inppdi5zZXJwaG9zIiwiaWQiOiI2MWI4ZTIzNmZjZjYxYmE5NGUwOTQ3YzEiLCJpYXQiOjE2Mzk1MTU0OTB9.u-FUpI7zC9ow4d7kqQxVYVvPj5briL-xpKTe9q4Ovg4
 
 {
-    "title":"yuli's blog",
-    "author":"yuli klein",
-    "url" : "https://yuli.blog/",
-    "likes": 12
+    "title":"chiko  blog",
+    "author":"chiko miko",
+    "url" : "https://gal.blog/",
+    "likes": 8
 }
-
 ###
-GET http://localhost:3003/api/blogs HTTP/1.1
+GET http://localhost:3003/api/blogs/ HTTP/1.1
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Inppdi5zZXJwaG9zIiwiaWQiOiI2MWI4ZTIzNmZjZjYxYmE5NGUwOTQ3YzEiLCJpYXQiOjE2Mzk1MTU0OTB9.u-FUpI7zC9ow4d7kqQxVYVvPj5briL-xpKTe9q4Ovg4
+###
+DELETE  http://localhost:3003/api/blogs/61b8eba5af3979a6286cb9e9 HTTP/1.1
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Inppdi5zZXJwaG9zIiwiaWQiOiI2MWI4ZTIzNmZjZjYxYmE5NGUwOTQ3YzEiLCJpYXQiOjE2Mzk1MTU0OTB9.u-FUpI7zC9ow4d7kqQxVYVvPj5briL-xpKTe9q4Ovg4
+###
+PUT  http://localhost:3003/api/blogs/update HTTP/1.1
+Content-Type: application/json
+
+{
+    "_id":"61b8a6d1c328bb01072a9c98",
+    "likes": 17
+}
+############################users
+POST http://localhost:3003/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "username":"zivSerphos123",
+    "password":"zain",
+    "name": "ziv serphos"
+}
+###
+GET http://localhost:3003/api/users/ HTTP/1.1
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Inppdi5zZXJwaG9zIiwiaWQiOiI2MWI4ZTIzNmZjZjYxYmE5NGUwOTQ3YzEiLCJpYXQiOjE2Mzk1MTU0OTB9.u-FUpI7zC9ow4d7kqQxVYVvPj5briL-xpKTe9q4Ovg4
+###################login
+POST http://localhost:3003/api/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "username":"ziv.serphos",
+    "password":"Zs123456"
+}
