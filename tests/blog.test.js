@@ -1,9 +1,8 @@
 const Blog = require("../models/blogSchema");
 const axios = require("axios");
 const for_testing = require("../utils/for_testing");
-// beforeAll(() => {
-//   console.log("testtesttest");
-// });
+
+
 test("dummy returns one", () => {
   const blogs = [];
 

@@ -13,7 +13,6 @@ const authMiddleware = async (request, response, next) => {
   try {
     const token = getTokenFrom(request);
     const decodedToken = jwt.verify(token, process.env.SECRET);
-    console.log(decodedToken);
     if (!token || !decodedToken.id) {
       return next({
         status: 401,

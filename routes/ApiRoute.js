@@ -15,8 +15,13 @@ const authMiddleware = require("../middlewares/auth");
 
 ApiRouter.use("/blogs", authMiddleware, blogRouter);
 
-ApiRouter.use("/users", authMiddleware, userRouter);
+ApiRouter.use("/users", userRouter);
 
 ApiRouter.use("/login", loginRouter);
+
+if (process.env.NODE_ENV === 'test') {
+  const testingRouter = require('./testingRoute')
+  ApiRouter.use('/testing', testingRouter)
+}
 
 module.exports = ApiRouter;

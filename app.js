@@ -7,7 +7,7 @@ const errorHandler = require("./error-handling/error-handler");
 const ApiRouter = require("./routes/ApiRoute");
 
 // mongo section
-const mongoUrl = process.env.MONGO_URI;
+const mongoUrl = process.env.NODE_ENV === 'test' ? process.env.TEST_MONGO_URI : process.env.MONGO_URI;
 mongoose.connect(mongoUrl);
 
 const db = mongoose.connection;
